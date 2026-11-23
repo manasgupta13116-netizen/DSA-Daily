@@ -50,34 +50,20 @@ public:
         cout<<"NULL"<<endl;
     }
 
-    bool isCycle(int pos){
+
+    void isCycle(int pos){
+        Node*temp = head;
         int counter = 0;
-        Node* temp = head;
-        Node* tail = head;
-        string isit;
-        if(head == NULL){
-            return;
-        }else{
-            while(tail->next != NULL){
-                tail = tail->next;
-            }
-
-            while(counter<= pos){
-                counter++;
-                temp = temp->next;
-            }
-            if(tail->next == temp){
-                 isit = "True";
-            }else{
-                 isit = "False";
-
-            }
+        while(temp != NULL){
+            temp = temp->next;
+            counter++;      
         }
 
-        cout<<isit<<endl;
-    
+        for(int i=0; i<counter; i++){
+            if(tail->next = counter)
+        }
+    }
 };
-
 int main()
 {
 
@@ -91,6 +77,5 @@ int main()
     ll.push_front(70);
     ll.push_front(80);
     ll.print_ll();
-    ll.isCycle(2);
     return 0;
 }
